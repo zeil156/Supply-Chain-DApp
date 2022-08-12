@@ -1,0 +1,24 @@
+CONTRACT ADDRESS:
+0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+
+ETHERSCAN:
+Link - 
+Transaction ID - 
+
+LIBRARIES USED:
++ Roles (developed internally: /coffeeaccesscontrol/Roles.sol; imported in remaining (dependent) .sol files from /coffeeaccesscontrol)
+
+IPFS USE: n/a.  Did not do optional Infura implementation
+
+ENVIRONMENT:
++ OS Version - Windows 11 Home v21H2
++ NODE Version - 10.13.0
++ Truffle Version - 4.1.14
++ Solidity Version - 0.4.24
++ Web3 Version - 1.7.5
+
+UML DOC REFERENCES:
++ Activity - CC4SupplyChainDapp ACTIVITY UML.pdf
++ Sequence - CC4SupplyChainDapp SEQUENCE UML.pdf
++ State - CC4SupplyChainDapp STATE UML.pdf
++ Class - CC4SupplyChainDapp CLASS UML.pdf
