@@ -186,7 +186,7 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true
         })
 
-        //Add distributor role
+        // Add distributor role
         await supplyChain.addDistributor(distributorID);
 
         // Mark an item as Sold by calling function buyItem()
@@ -205,7 +205,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[5], originFarmInformation, 'Error: Missing or Invalid originFarmInformation')
         assert.equal(resultBufferOne[6], originFarmLatitude, 'Error: Missing or Invalid originFarmLatitude')
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude')
-        assert.equal(resultBufferTwo[5], 4, 'Error: Invalid item State')
+        assert.equal(resultBufferTwo[6], distributorID, 'Error: Invalid item State')
         assert.equal(eventEmitted, true, 'Invalid event emitted')
     })    
 
@@ -222,8 +222,8 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true
         })
 
-        //Add distributor role
-        await supplyChain.addDistributor(distributorID);
+        // Add distributor role
+        // await supplyChain.addDistributor(distributorID);
 
         // Mark an item as Sold by calling function shipItem()
         await supplyChain.shipItem(upc, { from: distributorID })
