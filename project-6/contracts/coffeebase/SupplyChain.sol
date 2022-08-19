@@ -193,7 +193,7 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
     harvested(_upc) //MZ ADDED
     onlyFarmer() //MZ ADDED
   // Call modifier to verify caller of this function
-    verifyCaller(items[_upc].ownerID) //MZ ADDED
+    verifyCaller(items[_upc].originFarmerID) //MZ ADDED
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Processed; //MZ ADDED
@@ -208,7 +208,7 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
     processed(_upc) //MZ ADDED
     onlyFarmer() //MZ ADDED
   // Call modifier to verify caller of this function
-    verifyCaller(items[_upc].ownerID) //MZ ADDED
+    verifyCaller(items[_upc].originFarmerID) //MZ ADDED
   {
     // Update the appropriate fields
     items[_upc].itemState = State.Packed; //MZ ADDED
@@ -223,7 +223,7 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
     packed(_upc) //MZ ADDED
     onlyFarmer() //MZ ADDED
   // Call modifier to verify caller of this function
-    verifyCaller(items[_upc].ownerID) //MZ ADDED
+    verifyCaller(items[_upc].originFarmerID) //MZ ADDED
   {
     // Update the appropriate fields
     items[_upc].itemState = State.ForSale; //MZ ADDED
@@ -265,7 +265,7 @@ contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, Reta
     sold(_upc) //MZ ADDED
     onlyDistributor() //MZ ADDED
     // Call modifier to verify caller of this function
-    verifyCaller(items[_upc].ownerID) //MZ ADDED
+    verifyCaller(items[_upc].distributorID) //MZ ADDED
     {
     // Update the appropriate fields
     items[_upc].itemState = State.Shipped; //MZ ADDED
